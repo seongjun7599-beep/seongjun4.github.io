@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do you remember when I bloomed?</title>
+  <meta name="description" content="A single-screen page with a full background image, a line of text, and an audio player." />
+  <style>
+    :root { --fg: #111; --glass: rgba(255,255,255,.35); }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid; place-items: center; min-height: 100vh;
+      background: url('bg.jpg') center/cover fixed no-repeat;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+    }
+    .card {
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      background: var(--glass);
+      padding: 2.2rem 2.8rem; border-radius: 18px;
+      box-shadow: 0 20px 40px rgba(0,0,0,.25);
+      text-align: center; color: var(--fg);
+    }
+    h1 { margin: 0 0 1rem; font-size: clamp(24px, 6vw, 44px); line-height: 1.15; }
+    audio { width: min(420px, 90vw); outline: none; }
+    footer { position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); font-size: 12px; color: rgba(0,0,0,.65); }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Do you remember<br>when I bloomed?</h1>
+    <!-- Replace flower.mp3 with your own file name -->
+    <audio controls src="flower.mp3"></audio>
+  </main>
+  <footer>© 2025 Your Name</footer>
+</body>
+</html>
